@@ -1,0 +1,14 @@
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.deps.json
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.runtimeconfig.json
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.runtimeconfig.dev.json
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.dll
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.pdb
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.csproj.CoreCompileInputs.cache
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.RazorAssemblyInfo.cache
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.RazorAssemblyInfo.cs
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.AssemblyInfoInputs.cache
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.AssemblyInfo.cs
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.RazorTargetAssemblyInfo.cache
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.dll
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.pdb
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\obj\Debug\netcoreapp2.2\Shop.Api.csprojAssemblyReference.cache
