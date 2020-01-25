@@ -26,13 +26,36 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
-          "Microsoft.NETCore.App": "2.2.0"
+          "Microsoft.NETCore.App": "2.2.0",
+          "Shop.Api.DataAccess": "1.0.0"
         },
         "runtime": {
           "Shop.Api.dll": {}
         },
         "compile": {
           "Shop.Api.dll": {}
+        }
+      },
+      "Shop.Api.DataAccess/1.0.0": {
+        "dependencies": {
+          "Shop.Api.DataAccess.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Shop.Api.DataAccess.dll": {}
+        },
+        "compile": {
+          "Shop.Api.DataAccess.dll": {}
+        }
+      },
+      "Shop.Api.DataAccess.Contracts/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0"
+        },
+        "runtime": {
+          "Shop.Api.DataAccess.Contracts.dll": {}
+        },
+        "compile": {
+          "Shop.Api.DataAccess.Contracts.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3233,6 +3256,16 @@
   },
   "libraries": {
     "Shop.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shop.Api.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shop.Api.DataAccess.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

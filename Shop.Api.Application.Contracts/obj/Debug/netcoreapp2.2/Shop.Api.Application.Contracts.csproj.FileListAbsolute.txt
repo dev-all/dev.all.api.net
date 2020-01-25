@@ -1,9 +1,9 @@
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\bin\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.deps.json
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\bin\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.dll
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\bin\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.pdb
+F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\obj\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.csprojAssemblyReference.cache
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\obj\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.csproj.CoreCompileInputs.cache
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\obj\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.AssemblyInfoInputs.cache
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\obj\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.AssemblyInfo.cs
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\obj\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.dll
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\obj\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.pdb
-F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Application.Contracts\obj\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.csprojAssemblyReference.cache

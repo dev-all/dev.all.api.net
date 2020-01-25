@@ -1,9 +1,9 @@
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\bin\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.deps.json
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\bin\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.dll
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\bin\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.pdb
-F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\obj\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.csprojAssemblyReference.cache
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\obj\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.csproj.CoreCompileInputs.cache
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\obj\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.AssemblyInfoInputs.cache
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\obj\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.AssemblyInfo.cs
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\obj\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.dll
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\obj\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.pdb
+F:\.Net Core\web.api.net\all.shop.app\Shop.Api.DataAccessContracts\obj\Debug\netcoreapp2.2\Shop.Api.DataAccess.Contracts.csprojAssemblyReference.cache

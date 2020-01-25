@@ -5,9 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
     <Folder Include="Enum\" />
     <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
   </ItemGroup>
 
 </Project>

@@ -22,4 +22,8 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Api.DataAccess\Shop.Api.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

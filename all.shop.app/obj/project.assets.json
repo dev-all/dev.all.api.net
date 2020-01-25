@@ -4438,6 +4438,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Shop.Api.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Shop.Api.DataAccess.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.Api.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.DataAccess.dll": {}
+        }
+      },
+      "Shop.Api.DataAccess.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.Api.DataAccess.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.DataAccess.Contracts.dll": {}
+        }
       }
     }
   },
@@ -12066,13 +12092,24 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Shop.Api.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.DataAccess/Shop.Api.DataAccess.csproj",
+      "msbuildProject": "../Shop.Api.DataAccess/Shop.Api.DataAccess.csproj"
+    },
+    "Shop.Api.DataAccess.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.DataAccessContracts/Shop.Api.DataAccess.Contracts.csproj",
+      "msbuildProject": "../Shop.Api.DataAccessContracts/Shop.Api.DataAccess.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "Shop.Api.DataAccess >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12104,7 +12141,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.DataAccess\\Shop.Api.DataAccess.csproj": {
+              "projectPath": "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.DataAccess\\Shop.Api.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

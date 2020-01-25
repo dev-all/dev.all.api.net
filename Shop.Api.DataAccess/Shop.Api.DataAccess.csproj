@@ -5,8 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Mappers\" />
     <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Api.DataAccessContracts\Shop.Api.DataAccess.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
