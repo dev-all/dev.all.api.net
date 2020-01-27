@@ -8,7 +8,6 @@
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
     <Folder Include="Enum\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
