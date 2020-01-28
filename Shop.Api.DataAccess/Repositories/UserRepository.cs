@@ -52,7 +52,7 @@ namespace Shop.Api.DataAccess.Repositories
 
         public async Task<IEnumerable<UserEntity>> GetAll()
         {
-            return  _shopDBContext.Users.Select(x => x);
+            return await  _shopDBContext.Users.ToListAsync();
         }
 
         public async Task<UserEntity> Update(int idEntity, UserEntity updateUserEntity)

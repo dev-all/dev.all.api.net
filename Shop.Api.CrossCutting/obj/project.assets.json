@@ -913,6 +913,7 @@
         "dependencies": {
           "Shop.Api.Application.Contracts": "1.0.0",
           "Shop.Api.Business": "1.0.0",
+          "Shop.Api.DataAccess": "1.0.0",
           "Shop.Api.DataAccess.Contracts": "1.0.0"
         },
         "compile": {
@@ -925,6 +926,9 @@
       "Shop.Api.Application.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Shop.Api.Business": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Shop.Api.Application.Contracts.dll": {}
         },
@@ -946,6 +950,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Shop.Api.Business": "1.0.0",
           "Shop.Api.DataAccess.Contracts": "1.0.0"
         },
         "compile": {

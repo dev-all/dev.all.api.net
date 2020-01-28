@@ -907,6 +907,16 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "Shop.Api.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Shop.Api.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.Business.dll": {}
+        }
+      },
       "Shop.Api.DataAccess.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -3471,6 +3481,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "Shop.Api.Business/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.Business/Shop.Api.Business.csproj",
+      "msbuildProject": "../Shop.Api.Business/Shop.Api.Business.csproj"
+    },
     "Shop.Api.DataAccess.Contracts/1.0.0": {
       "type": "project",
       "path": "../Shop.Api.DataAccessContracts/Shop.Api.DataAccess.Contracts.csproj",
@@ -3480,6 +3495,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
+      "Shop.Api.Business >= 1.0.0",
       "Shop.Api.DataAccess.Contracts >= 1.0.0"
     ]
   },
@@ -3513,6 +3529,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.Business\\Shop.Api.Business.csproj": {
+              "projectPath": "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.Business\\Shop.Api.Business.csproj"
+            },
             "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.DataAccessContracts\\Shop.Api.DataAccess.Contracts.csproj": {
               "projectPath": "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.DataAccessContracts\\Shop.Api.DataAccess.Contracts.csproj"
             }

@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Shop.Api.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Shop.Api.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.Business.dll": {}
+        }
       }
     }
   },
@@ -678,11 +688,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Shop.Api.Business/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.Business/Shop.Api.Business.csproj",
+      "msbuildProject": "../Shop.Api.Business/Shop.Api.Business.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "Shop.Api.Business >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -714,7 +730,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.Business\\Shop.Api.Business.csproj": {
+              "projectPath": "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.Business\\Shop.Api.Business.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

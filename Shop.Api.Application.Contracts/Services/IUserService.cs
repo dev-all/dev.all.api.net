@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shop.Api.Business.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,5 +10,6 @@ namespace Shop.Api.Application.Contracts.Services
     {
 
         Task<string> GetUserNombreApellido(int id);
+        Task<User> AddUser(User user);
     }
 }
