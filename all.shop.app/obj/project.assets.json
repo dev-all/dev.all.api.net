@@ -4439,6 +4439,59 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Shop.Api.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Shop.Api.Application.Contracts": "1.0.0",
+          "Shop.Api.Business": "1.0.0",
+          "Shop.Api.DataAccess.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.Api.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.Application.dll": {}
+        }
+      },
+      "Shop.Api.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Shop.Api.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.Application.Contracts.dll": {}
+        }
+      },
+      "Shop.Api.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Shop.Api.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.Business.dll": {}
+        }
+      },
+      "Shop.Api.CrossCutting/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "2.2.0",
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Shop.Api.Application": "1.0.0",
+          "Shop.Api.Application.Contracts": "1.0.0",
+          "Shop.Api.DataAccess": "1.0.0",
+          "Shop.Api.DataAccess.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.Api.CrossCutting.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Api.CrossCutting.dll": {}
+        }
+      },
       "Shop.Api.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -12093,6 +12146,26 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Shop.Api.Application/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.Application/Shop.Api.Application.csproj",
+      "msbuildProject": "../Shop.Api.Application/Shop.Api.Application.csproj"
+    },
+    "Shop.Api.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.Application.Contracts/Shop.Api.Application.Contracts.csproj",
+      "msbuildProject": "../Shop.Api.Application.Contracts/Shop.Api.Application.Contracts.csproj"
+    },
+    "Shop.Api.Business/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.Business/Shop.Api.Business.csproj",
+      "msbuildProject": "../Shop.Api.Business/Shop.Api.Business.csproj"
+    },
+    "Shop.Api.CrossCutting/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Api.CrossCutting/Shop.Api.CrossCutting.csproj",
+      "msbuildProject": "../Shop.Api.CrossCutting/Shop.Api.CrossCutting.csproj"
+    },
     "Shop.Api.DataAccess/1.0.0": {
       "type": "project",
       "path": "../Shop.Api.DataAccess/Shop.Api.DataAccess.csproj",
@@ -12109,6 +12182,7 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
+      "Shop.Api.CrossCutting >= 1.0.0",
       "Shop.Api.DataAccess >= 1.0.0"
     ]
   },
@@ -12142,6 +12216,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.CrossCutting\\Shop.Api.CrossCutting.csproj": {
+              "projectPath": "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.CrossCutting\\Shop.Api.CrossCutting.csproj"
+            },
             "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.DataAccess\\Shop.Api.DataAccess.csproj": {
               "projectPath": "F:\\.Net Core\\web.api.net\\all.shop.app\\Shop.Api.DataAccess\\Shop.Api.DataAccess.csproj"
             }

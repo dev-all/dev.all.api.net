@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shop.Api.DataAccess.Repositories
+namespace Shop.Api.DataAccess.Contracts.Repositories
 {
    public interface IUserRepository: IRepository<UserEntity>
     {

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Shop.Api.CrossCutting.Register;
 using Shop.Api.DataAccess;
 
 namespace all.shop.app
@@ -31,8 +32,8 @@ namespace all.shop.app
            // services.AddDbContext<ShopDBContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:dbConnectionMSSLQ"]));
             services.AddDbContext<ShopDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("dbConnectionMSSLQ")));
 
-
-
+           // Inyección dependencias Registracion de servicios y repositorios
+            IoCRegister.AddRegistration(services);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

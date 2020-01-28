@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using Shop.Api.DataAccess.Contracts;
 using Shop.Api.DataAccess.Contracts.Entities;
+using Shop.Api.DataAccess.Contracts.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Api.DataAccess.Repositories
 {
-   public class UserRepository: IUserRepository
+   public class UserRepository : IUserRepository
     {
         //metodos para el crud https://www.youtube.com/watch?v=wfpdH0EiUzI&list=PLU3UD_RM_1Abkcw8jjCl4o179jfyD47mj&index=18
 

@@ -6,7 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Mappers\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Api.Application.Contracts\Shop.Api.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Shop.Api.DataAccessContracts\Shop.Api.DataAccess.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
