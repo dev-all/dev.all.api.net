@@ -14,14 +14,12 @@ namespace Shop.Api.CrossCutting.Register
         {
             AddRegisterServices(services);
             AddRegisterRepositories(services);
-            AddRegisterOthers(services);
+           // AddRegisterOthers(services);
 
             return services;
 
         }
-
-
-
+        
         private static IServiceCollection AddRegisterServices(IServiceCollection services)
         {
 
@@ -39,15 +37,15 @@ namespace Shop.Api.CrossCutting.Register
             return services;
         }
 
-        private static IServiceCollection AddRegisterOthers(IServiceCollection services)
-        {
+        //private static IServiceCollection AddRegisterOthers(IServiceCollection services)
+        //{
 
-          //  services.AddTransient<IAppConfig, AppConfig>();
-          //  services.AddTransient<IApiCaller, ApiCaller>();
+        //  //  services.AddTransient<IAppConfig, AppConfig>();
+        //  //  services.AddTransient<IApiCaller, ApiCaller>();
 
 
-            return services;
-        }
+        //    return services;
+        //}
 
 
 

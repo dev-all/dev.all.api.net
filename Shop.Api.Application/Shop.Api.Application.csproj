@@ -10,7 +10,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shop.Api.Application.Contracts\Shop.Api.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Shop.Api.Business\Shop.Api.Business.csproj" />
     <ProjectReference Include="..\Shop.Api.DataAccessContracts\Shop.Api.DataAccess.Contracts.csproj" />
+    <ProjectReference Include="..\Shop.Api.DataAccess\Shop.Api.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Shop.Api.DataAccess.Contracts.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shop.Api.DataAccess.Contracts.Entities
+namespace Shop.Api.DataAccess.EntityConfig
 {
     public class UserEntityConfig
     {

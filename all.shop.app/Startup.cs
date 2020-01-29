@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Shop.Api.CrossCutting.Register;
 using Shop.Api.DataAccess;
+using Shop.Api.DataAccess.Contracts;
 
 namespace all.shop.app
 {
@@ -29,11 +30,14 @@ namespace all.shop.app
         public void ConfigureServices(IServiceCollection services)
         {
 
+
+            // Inyección dependencias Registracion de servicios y repositorios
+            services.AddTransient<IShopDBContext, ShopDBContext>();
+            IoCRegister.AddRegistration(services);
+
            // services.AddDbContext<ShopDBContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:dbConnectionMSSLQ"]));
             services.AddDbContext<ShopDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("dbConnectionMSSLQ")));
 
-           // Inyección dependencias Registracion de servicios y repositorios
-            IoCRegister.AddRegistration(services);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -51,7 +55,7 @@ namespace all.shop.app
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

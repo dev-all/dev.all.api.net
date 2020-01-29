@@ -3554,6 +3554,7 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.Extensions.Caching.Memory >= 2.2.0",
       "Microsoft.Extensions.Configuration >= 2.2.0",
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Shop.Api.Application >= 1.0.0",
       "Shop.Api.Application.Contracts >= 1.0.0",
@@ -3620,6 +3621,10 @@
             "version": "[2.2.0, )"
           },
           "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.Extensions.DependencyInjection.Abstractions": {
             "target": "Package",
             "version": "[2.2.0, )"
           },

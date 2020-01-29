@@ -11,10 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mappers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Shop.Api.Business\Shop.Api.Business.csproj" />
     <ProjectReference Include="..\Shop.Api.DataAccessContracts\Shop.Api.DataAccess.Contracts.csproj" />
   </ItemGroup>
 

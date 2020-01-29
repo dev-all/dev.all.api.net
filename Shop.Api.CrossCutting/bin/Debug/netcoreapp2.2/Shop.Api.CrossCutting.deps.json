@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
           "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
           "Shop.Api.Application": "1.0.0",
           "Shop.Api.Application.Contracts": "1.0.0",
           "Shop.Api.DataAccess": "1.0.0",
@@ -508,6 +509,8 @@
       "Shop.Api.Application/1.0.0": {
         "dependencies": {
           "Shop.Api.Application.Contracts": "1.0.0",
+          "Shop.Api.Business": "1.0.0",
+          "Shop.Api.DataAccess": "1.0.0",
           "Shop.Api.DataAccess.Contracts": "1.0.0"
         },
         "runtime": {
@@ -515,12 +518,21 @@
         }
       },
       "Shop.Api.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Shop.Api.Business": "1.0.0"
+        },
         "runtime": {
           "Shop.Api.Application.Contracts.dll": {}
         }
       },
+      "Shop.Api.Business/1.0.0": {
+        "runtime": {
+          "Shop.Api.Business.dll": {}
+        }
+      },
       "Shop.Api.DataAccess/1.0.0": {
         "dependencies": {
+          "Shop.Api.Business": "1.0.0",
           "Shop.Api.DataAccess.Contracts": "1.0.0"
         },
         "runtime": {
@@ -920,6 +932,11 @@
       "sha512": ""
     },
     "Shop.Api.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shop.Api.Business/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

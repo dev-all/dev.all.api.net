@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shop.Api.DataAccess.Contracts;
 using Shop.Api.DataAccess.Contracts.Entities;
+using Shop.Api.DataAccess.EntityConfig;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,10 +18,12 @@ namespace Shop.Api.DataAccess
         {
 
         }
+        public ShopDBContext() 
+        {
 
-        //  public shopDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options) { }
+        }
 
-       //sobrecarga deñ contexto al crear la base de datos
+        //sobrecarga del contexto al crear la base de datos
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
 
             UserEntityConfig.SetEntityBuilder(modelBuilder.Entity<UserEntity>());
