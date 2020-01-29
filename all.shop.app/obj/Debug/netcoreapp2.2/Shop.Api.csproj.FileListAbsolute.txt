@@ -25,3 +25,4 @@ F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.
 F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.Application.pdb
 F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.Application.Contracts.pdb
 F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.Business.pdb
+F:\.Net Core\web.api.net\all.shop.app\all.shop.app\bin\Debug\netcoreapp2.2\Shop.Api.xml

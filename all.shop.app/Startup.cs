@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Shop.Api.Config;
 using Shop.Api.CrossCutting.Register;
 using Shop.Api.DataAccess;
 using Shop.Api.DataAccess.Contracts;
@@ -38,6 +39,7 @@ namespace all.shop.app
            // services.AddDbContext<ShopDBContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:dbConnectionMSSLQ"]));
             services.AddDbContext<ShopDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("dbConnectionMSSLQ")));
 
+            SwaggerConfig.AddRegistration(services);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -54,8 +56,8 @@ namespace all.shop.app
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
-           // app.UseHttpsRedirection();
+            SwaggerConfig.AddRegistration(app);
+            // app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
