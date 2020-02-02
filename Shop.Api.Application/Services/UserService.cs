@@ -4,6 +4,7 @@ using Shop.Api.DataAccess.Contracts.Repositories;
 using Shop.Api.DataAccess.Mappers;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,11 +20,6 @@ namespace Shop.Api.Application.Services
             _userRepository = userRepository;
         }
 
-        public async Task<string> GetUserNombreApellido(int id)  {
-            var entidad =await _userRepository.Get(id);
-            return entidad.NombreApellido;
-        }
-
         public async Task<User> AddUser(User user)
         {
             // nu usa automaper pero se podria utilizar 
@@ -33,6 +29,28 @@ namespace Shop.Api.Application.Services
 
         }
 
+        public async Task<User> GetUser(int id)
+        {
+            var entidad = await _userRepository.Get(id);
+            return UserMapper.Map(entidad);
+        }
+
+        public async Task<IEnumerable<User>> GetUserAll()
+        {
+            var userList = await _userRepository.GetAll();            
+            return userList.Select(UserMapper.Map);
+        }
+
+        public async Task DeleteUser(int id)
+        {
+             await _userRepository.DeleteAsync(id);
+        }
+
+        public async Task<User> UpdateUser(User user)
+        {
+            var entidad = await _userRepository.Update(UserMapper.Map(user));
+            return UserMapper.Map(entidad);
+        }
 
     }
 }

@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mappers\" />
+    <Compile Remove="Mappers\UserMapper.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,6 +13,10 @@
     <ProjectReference Include="..\Shop.Api.Business\Shop.Api.Business.csproj" />
     <ProjectReference Include="..\Shop.Api.DataAccessContracts\Shop.Api.DataAccess.Contracts.csproj" />
     <ProjectReference Include="..\Shop.Api.DataAccess\Shop.Api.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mappers\" />
   </ItemGroup>
 
 </Project>

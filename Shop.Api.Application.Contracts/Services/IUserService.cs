@@ -8,8 +8,12 @@ namespace Shop.Api.Application.Contracts.Services
 {
     public interface IUserService
     {
-
-        Task<string> GetUserNombreApellido(int id);
+       
+        Task<User> GetUser(int id);
+        Task<IEnumerable<User>> GetUserAll();
         Task<User> AddUser(User user);
+        Task DeleteUser(int id);
+        Task<User> UpdateUser(User user);
+      
     }
 }

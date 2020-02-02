@@ -4,5 +4,42 @@
         <name>Shop.Api</name>
     </assembly>
     <members>
+        <member name="M:Shop.Api.Controllers.UserController.GetUserList">
+            <summary>
+            Lista de Usuarios - Visualizacion via SWAGGER
+            </summary>
+            <param name="id"></param>
+            <returns>String</returns>
+            
+        </member>
+        <member name="M:Shop.Api.Controllers.UserController.GetUser(System.Int32)">
+            <summary>
+            Get User - Nombre del Accion que se ejecutara - isualizacion via SWAGGER
+            </summary>
+            <param name="id"></param>
+            <returns>String</returns>
+            
+        </member>
+        <member name="M:Shop.Api.Controllers.UserController.AddUser(Shop.Api.ViewModels.UserModels)">
+            <summary>
+            Registrar Nuevo Usuario
+            </summary>
+            <param name="userModels"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.UserController.UpdateUser(Shop.Api.ViewModels.UserModels)">
+            <summary>
+            Actualizar Usuario
+            </summary>
+            <param name="userModels"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Eliminar del la BD
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

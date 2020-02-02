@@ -22,6 +22,15 @@ namespace Shop.Api.DataAccess.Repositories
             _shopDBContext = shopDBContext;
         }
 
+
+
+        public async Task<UserEntity> Get(int idEntity)
+        {
+            var result = await _shopDBContext.Users.FirstOrDefaultAsync( x => x.Id == idEntity);
+            return result;
+
+        }
+
         public async Task<UserEntity> Add(UserEntity userEntity)
         {
            await _shopDBContext.Users.AddAsync(userEntity);
@@ -38,23 +47,17 @@ namespace Shop.Api.DataAccess.Repositories
             await _shopDBContext.SaveChangesAsync();
         }
 
-        public Task<bool> Exist(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<UserEntity> Get(int idEntity)
-        {
-            var result = await _shopDBContext.Users.FirstOrDefaultAsync( x => x.Id == idEntity);
-            return result;
-
-        }
-
         public async Task<IEnumerable<UserEntity>> GetAll()
         {
             return await  _shopDBContext.Users.ToListAsync();
         }
 
+
+        public Task<bool> Exist(int id)
+        {
+            throw new NotImplementedException();
+        }
+                    
         public async Task<UserEntity> Update(int idEntity, UserEntity updateUserEntity)
         {
             var entity = await Get(idEntity);
@@ -72,5 +75,7 @@ namespace Shop.Api.DataAccess.Repositories
 
             return updateEntity.Entity;
         }
+
+       
     }
 }
