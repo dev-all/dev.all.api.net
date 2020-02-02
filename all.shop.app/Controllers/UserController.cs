@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Shop.Api.Application.Configuration;
 using Shop.Api.Application.Contracts.Services;
 using Shop.Api.Mappers;
 using Shop.Api.ViewModels;
@@ -18,9 +20,41 @@ namespace Shop.Api.Controllers
     {
 
         private readonly IUserService _userService;
-        public UserController(IUserService userSerices) {
+        public readonly IAppConfig _appConfig;
+        private readonly IConfiguration _configuration;
+        public UserController(IUserService userSerices, IAppConfig appConfig ,IConfiguration configuration) {
             _userService = userSerices;
+            _appConfig = appConfig;
+            _configuration = configuration;
+        }
 
+
+        /// <summary>
+        /// Get User - Nombre del Accion que se ejecutara - isualizacion via SWAGGER
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>String</returns>
+        /// 
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("appliaction/json", Type = typeof(UserMapper))] //string o model  return
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUser(int id)
+        {
+            var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
+            var max = _appConfig.MaxTrys;
+            var seconds = _appConfig.SecondsToWait;
+
+
+            var  user = await _userService.GetUser(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(UserMapper.Map(user));
         }
 
         /// <summary>
@@ -49,28 +83,6 @@ namespace Shop.Api.Controllers
 
 
 
-        /// <summary>
-        /// Get User - Nombre del Accion que se ejecutara - isualizacion via SWAGGER
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>String</returns>
-        /// 
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(500)]
-        [Produces("appliaction/json", Type = typeof(UserMapper))] //string o model  return
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser(int id)
-        {
-            var  user = await _userService.GetUser(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(UserMapper.Map(user));
-        }
 
 
         /// <summary>

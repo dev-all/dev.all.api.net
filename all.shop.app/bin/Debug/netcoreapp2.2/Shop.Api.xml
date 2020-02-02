@@ -4,17 +4,17 @@
         <name>Shop.Api</name>
     </assembly>
     <members>
-        <member name="M:Shop.Api.Controllers.UserController.GetUserList">
+        <member name="M:Shop.Api.Controllers.UserController.GetUser(System.Int32)">
             <summary>
-            Lista de Usuarios - Visualizacion via SWAGGER
+            Get User - Nombre del Accion que se ejecutara - isualizacion via SWAGGER
             </summary>
             <param name="id"></param>
             <returns>String</returns>
             
         </member>
-        <member name="M:Shop.Api.Controllers.UserController.GetUser(System.Int32)">
+        <member name="M:Shop.Api.Controllers.UserController.GetUserList">
             <summary>
-            Get User - Nombre del Accion que se ejecutara - isualizacion via SWAGGER
+            Lista de Usuarios - Visualizacion via SWAGGER
             </summary>
             <param name="id"></param>
             <returns>String</returns>
