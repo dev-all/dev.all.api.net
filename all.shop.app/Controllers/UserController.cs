@@ -42,9 +42,10 @@ namespace Shop.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
-            var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
-            var max = _appConfig.MaxTrys;
-            var seconds = _appConfig.SecondsToWait;
+            //solo para evaluar y aprender la utilizacion de polly
+            //var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
+            //var max = _appConfig.MaxTrys;
+            //var seconds = _appConfig.SecondsToWait;
 
 
             var  user = await _userService.GetUser(id);

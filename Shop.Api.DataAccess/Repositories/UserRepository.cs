@@ -33,8 +33,12 @@ namespace Shop.Api.DataAccess.Repositories
 
         public async Task<UserEntity> Add(UserEntity userEntity)
         {
-           await _shopDBContext.Users.AddAsync(userEntity);
-           await _shopDBContext.SaveChangesAsync();
+            // fozar la ejecucion de la RetryPolity
+            // throw new Exception("test politica de Re intento RetryPolity");
+
+
+            await _shopDBContext.Users.AddAsync(userEntity);
+            await _shopDBContext.SaveChangesAsync();
             return userEntity;
         }
 
