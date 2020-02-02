@@ -16,6 +16,7 @@ using Shop.Api.CrossCutting.Register;
 using Shop.Api.DataAccess;
 using Shop.Api.DataAccess.Contracts;
 
+
 namespace all.shop.app
 {
     public class Startup

@@ -19,4 +19,8 @@
     <Folder Include="Mappers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Polly" Version="6.1.0" />
+  </ItemGroup>
+
 </Project>

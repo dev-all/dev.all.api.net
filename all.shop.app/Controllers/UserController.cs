@@ -12,10 +12,9 @@ using Shop.Api.ViewModels;
 
 namespace Shop.Api.Controllers
 {
-    [Produces("appliaction/json")]
-    [Route("api/[controller]")]
-    [ApiController]
-  
+    [Produces("application/json")]
+    [Route("[controller]")]
+
     public class UserController : Controller
     {
 
@@ -35,17 +34,18 @@ namespace Shop.Api.Controllers
         /// <param name="id"></param>
         /// <returns>String</returns>
         /// 
+   
+        [HttpGet("{id}")]
+        [Produces("application/json", Type = typeof(UserMapper))] //string o model  return
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
-        [Produces("appliaction/json", Type = typeof(UserMapper))] //string o model  return
-        [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
             //solo para evaluar y aprender la utilizacion de polly
-            //var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
-            //var max = _appConfig.MaxTrys;
-            //var seconds = _appConfig.SecondsToWait;
+            var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
+            var max = _appConfig.MaxTrys;
+            var seconds = _appConfig.SecondsToWait;
 
 
             var  user = await _userService.GetUser(id);
@@ -64,10 +64,10 @@ namespace Shop.Api.Controllers
         /// <param name="id"></param>
         /// <returns>String</returns>
         /// 
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(500)]
-        [Produces("appliaction/json",Type =typeof(IEnumerable<UserModels>))] //string o model  return
+        //[ProducesResponseType(200)]
+        //[ProducesResponseType(400)]
+        //[ProducesResponseType(500)]
+         [Produces("application/json",Type =typeof(IEnumerable<UserModels>))] //string o model  return
         [HttpGet()]
         public async Task<ActionResult<IEnumerable<UserModels>>> GetUserList()
         {
@@ -77,8 +77,8 @@ namespace Shop.Api.Controllers
             {
                 return NotFound();
             }
-
-            return Ok(userList.Select(UserMapper.Map));
+            var list = userList.Select(UserMapper.Map);
+            return Ok(list);
         }
 
 
@@ -94,7 +94,7 @@ namespace Shop.Api.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(401)]
         [ProducesResponseType(500)]
-        [Produces("appliaction/json", Type = typeof(UserModels))] //string o model  return
+        [Produces("application/json", Type = typeof(UserModels))] //string o model  return
         [HttpPost]
         public async Task<IActionResult> AddUser([FromBody] UserModels userModels)
         {
@@ -117,7 +117,7 @@ namespace Shop.Api.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(401)]
         [ProducesResponseType(500)]
-        [Produces("appliaction/json", Type = typeof(UserModels))] //string o model  return
+        [Produces("application/json", Type = typeof(UserModels))] //string o model  return
         [HttpPut]
         public async Task<IActionResult> UpdateUser([FromBody] UserModels userModels)
         {
@@ -135,16 +135,19 @@ namespace Shop.Api.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [ProducesResponseType(200)]
-        [ProducesResponseType(401)]
-        [ProducesResponseType(500)]
-        [Produces("appliaction/json", Type = typeof(bool))] //string o model  return
+        /// 
+
+
         [HttpDelete("{id}")]
+        [ProducesDefaultResponseType]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+       
         public async Task<IActionResult> DeleteUser(int id)
         {
              await _userService.DeleteUser(id);
-                        
-            return Ok();
+
+            return NoContent();
         }
 
     }
