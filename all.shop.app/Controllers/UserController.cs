@@ -21,26 +21,26 @@ namespace Shop.Api.Controllers
 
         private readonly IUserService _userService;
         private readonly IApiCaller _apiCaller;
-        //public readonly IAppConfig _appConfig;
-       // private readonly IConfiguration _configuration;
+        public readonly IAppConfig _appConfig;
+        private readonly IConfiguration _configuration;
 
-        public UserController(IUserService userSerices, IApiCaller apiCaller)
-        {
-            _userService = userSerices;
-            _apiCaller = apiCaller;
-          
-
-        }
-
-
-        //public UserController(IUserService userSerices, IApiCaller apiCaller, IAppConfig appConfig, IConfiguration configuration)
+        //public UserController(IUserService userSerices, IApiCaller apiCaller)
         //{
         //    _userService = userSerices;
         //    _apiCaller = apiCaller;
-        //    _appConfig = appConfig;
-        //    _configuration = configuration;
+
 
         //}
+
+
+        public UserController(IUserService userSerices, IApiCaller apiCaller, IAppConfig appConfig, IConfiguration configuration)
+        {
+            _userService = userSerices;
+            _apiCaller = apiCaller;
+            _appConfig = appConfig;
+            _configuration = configuration;
+
+        }
 
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Shop.Api.Controllers
         public async Task<IActionResult> GetUser(int id)
         {
             //solo para evaluar y aprender la utilizacion de polly
-            //var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
+            var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
             //var max = _appConfig.MaxTrys;
             //var seconds = _appConfig.SecondsToWait;
 

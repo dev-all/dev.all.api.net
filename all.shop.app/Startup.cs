@@ -57,8 +57,12 @@ namespace all.shop.app
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             SwaggerConfig.AddRegistration(app);
+
             app.UseEjemploMiddleware();
+
+
             // app.UseHttpsRedirection();
             app.UseMvc();
         }
