@@ -12,7 +12,8 @@
           "Shop.Api.Application.Contracts": "1.0.0",
           "Shop.Api.Business": "1.0.0",
           "Shop.Api.DataAccess": "1.0.0",
-          "Shop.Api.DataAccess.Contracts": "1.0.0"
+          "Shop.Api.DataAccess.Contracts": "1.0.0",
+          "Newtonsoft.Json": "11.0.0.0"
         },
         "runtime": {
           "Shop.Api.Application.dll": {}
@@ -541,6 +542,14 @@
         "runtime": {
           "Shop.Api.DataAccess.Contracts.dll": {}
         }
+      },
+      "Newtonsoft.Json/11.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
+        }
       }
     }
   },
@@ -945,6 +954,11 @@
     },
     "Shop.Api.DataAccess.Contracts/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/11.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

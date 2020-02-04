@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Shop.Api.Application.Configuration;
+using Shop.Api.Application.Contracts.ApiCaller;
 using Shop.Api.Application.Contracts.Services;
+using Shop.Api.Business.Models;
 using Shop.Api.Mappers;
 using Shop.Api.ViewModels;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Shop.Api.Controllers
 {
@@ -19,13 +20,27 @@ namespace Shop.Api.Controllers
     {
 
         private readonly IUserService _userService;
-        public readonly IAppConfig _appConfig;
-        private readonly IConfiguration _configuration;
-        public UserController(IUserService userSerices, IAppConfig appConfig ,IConfiguration configuration) {
+        private readonly IApiCaller _apiCaller;
+        //public readonly IAppConfig _appConfig;
+       // private readonly IConfiguration _configuration;
+
+        public UserController(IUserService userSerices, IApiCaller apiCaller)
+        {
             _userService = userSerices;
-            _appConfig = appConfig;
-            _configuration = configuration;
+            _apiCaller = apiCaller;
+          
+
         }
+
+
+        //public UserController(IUserService userSerices, IApiCaller apiCaller, IAppConfig appConfig, IConfiguration configuration)
+        //{
+        //    _userService = userSerices;
+        //    _apiCaller = apiCaller;
+        //    _appConfig = appConfig;
+        //    _configuration = configuration;
+
+        //}
 
 
         /// <summary>
@@ -34,7 +49,7 @@ namespace Shop.Api.Controllers
         /// <param name="id"></param>
         /// <returns>String</returns>
         /// 
-   
+
         [HttpGet("{id}")]
         [Produces("application/json", Type = typeof(UserMapper))] //string o model  return
         [ProducesResponseType(200)]
@@ -43,12 +58,13 @@ namespace Shop.Api.Controllers
         public async Task<IActionResult> GetUser(int id)
         {
             //solo para evaluar y aprender la utilizacion de polly
-            var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
-            var max = _appConfig.MaxTrys;
-            var seconds = _appConfig.SecondsToWait;
+            //var maxActual = _configuration.GetSection("Polly:MaxTrys").Value;
+            //var max = _appConfig.MaxTrys;
+            //var seconds = _appConfig.SecondsToWait;
 
+            var response = _apiCaller.GetServiceResponseById<User>("Values", 1);
 
-            var  user = await _userService.GetUser(id);
+            var user = await _userService.GetUser(id);
 
             if (user == null)
             {
@@ -64,13 +80,15 @@ namespace Shop.Api.Controllers
         /// <param name="id"></param>
         /// <returns>String</returns>
         /// 
-        //[ProducesResponseType(200)]
-        //[ProducesResponseType(400)]
-        //[ProducesResponseType(500)]
-         [Produces("application/json",Type =typeof(IEnumerable<UserModels>))] //string o model  return
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("application/json", Type = typeof(IEnumerable<UserModels>))] //string o model  return
         [HttpGet()]
         public async Task<ActionResult<IEnumerable<UserModels>>> GetUserList()
         {
+            
+
             var userList = await _userService.GetUserAll();
 
             if (userList == null)
@@ -142,10 +160,10 @@ namespace Shop.Api.Controllers
         [ProducesDefaultResponseType]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-       
+
         public async Task<IActionResult> DeleteUser(int id)
         {
-             await _userService.DeleteUser(id);
+            await _userService.DeleteUser(id);
 
             return NoContent();
         }

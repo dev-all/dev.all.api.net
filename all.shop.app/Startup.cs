@@ -58,6 +58,7 @@ namespace all.shop.app
                 app.UseHsts();
             }
             SwaggerConfig.AddRegistration(app);
+            app.UseEjemploMiddleware();
             // app.UseHttpsRedirection();
             app.UseMvc();
         }

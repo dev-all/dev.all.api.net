@@ -18,3 +18,5 @@ F:\.Net Core\web.api.net\all.shop.app\Shop.Api.CrossCutting\obj\Debug\netcoreapp
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.CrossCutting\obj\Debug\netcoreapp2.2\Shop.Api.CrossCutting.csproj.CopyComplete
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.CrossCutting\obj\Debug\netcoreapp2.2\Shop.Api.CrossCutting.dll
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.CrossCutting\obj\Debug\netcoreapp2.2\Shop.Api.CrossCutting.pdb
+F:\.Net Core\web.api.net\all.shop.app\Shop.Api.CrossCutting\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+F:\.Net Core\web.api.net\all.shop.app\Shop.Api.CrossCutting\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml

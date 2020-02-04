@@ -42,5 +42,12 @@
             <returns></returns>
             
         </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EjemploMiddleware.UseEjemploMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            metodo de extecion de IApplicationBoilder
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

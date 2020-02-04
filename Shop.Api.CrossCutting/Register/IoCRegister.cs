@@ -5,6 +5,8 @@ using Shop.Api.DataAccess.Repositories;
 using Shop.Api.Application.Services;
 using Shop.Api.Application.Contracts.Services;
 using Shop.Api.Application.Configuration;
+using Shop.Api.Application.Contracts.ApiCaller;
+using Shop.Api.Application.ApiCaller;
 
 namespace Shop.Api.CrossCutting.Register
 {
@@ -48,8 +50,7 @@ namespace Shop.Api.CrossCutting.Register
             //Configuración fuertemente tipada con Polly, basicamnete permite declarar variables el appsettings // los camibos no necesitan que pares la app para q impacten
             services.AddTransient<IAppConfig, AppConfig>();
 
-
-          //  services.AddTransient<IApiCaller, ApiCaller>();
+            services.AddTransient<IApiCaller, ApiCaller>();
 
 
             return services;

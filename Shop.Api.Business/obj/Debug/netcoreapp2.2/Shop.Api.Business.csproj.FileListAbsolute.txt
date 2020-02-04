@@ -6,4 +6,3 @@ F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Business\obj\Debug\netcoreapp2.2\
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Business\obj\Debug\netcoreapp2.2\Shop.Api.Business.AssemblyInfo.cs
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Business\obj\Debug\netcoreapp2.2\Shop.Api.Business.dll
 F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Business\obj\Debug\netcoreapp2.2\Shop.Api.Business.pdb
-F:\.Net Core\web.api.net\all.shop.app\Shop.Api.Business\obj\Debug\netcoreapp2.2\Shop.Api.Business.csprojAssemblyReference.cache
